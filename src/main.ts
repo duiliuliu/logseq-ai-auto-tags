@@ -56,7 +56,7 @@ const setBlockTags = async (e: any) => {
   if (block?.content) {
     const res = await getBlockTags(block?.content)
     const tags = eval(extractCodeBlockFromMarkdown(res.result))
-    await logseq.Editor.updateBlock(block?.uuid, `${block.content} ${tags.map((i: string) => '' + i).join(' ')}`)
+    await logseq.Editor.updateBlock(block?.uuid, `${block.content} #☘️🕰/key ${tags.map((i: string) => '' + i).join(' ')}`)
     logseq.Editor.exitEditingMode()
   }
 }
